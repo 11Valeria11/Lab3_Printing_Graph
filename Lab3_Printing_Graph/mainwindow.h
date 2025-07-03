@@ -14,7 +14,7 @@ class QCheckBox;
 
 QT_CHARTS_USE_NAMESPACE
 
-    class MainWindow : public QMainWindow
+class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
