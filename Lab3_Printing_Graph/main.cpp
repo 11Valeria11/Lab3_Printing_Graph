@@ -13,14 +13,11 @@
 
 void registerServices()
 {
-    // Получаем доступ к единственному экземпляру контейнера
     auto& ioc = IoCContainer::instance();
 
-    // Регистрируем ридеры
     ioc.registerService<IDataReader>("sqlite_reader", std::make_shared<SqliteReader>());
     ioc.registerService<IDataReader>("json_reader", std::make_shared<JsonReader>());
 
-    // Регистрируем классы для создания графиков
     ioc.registerService<IChart>("line_chart", std::make_shared<LineChart>());
     ioc.registerService<IChart>("bar_chart", std::make_shared<BarChart>());
     ioc.registerService<IChart>("pie_chart", std::make_shared<PieChart>());

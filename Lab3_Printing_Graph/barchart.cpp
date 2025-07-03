@@ -22,7 +22,8 @@ QChart* BarChart::create(const DataSet& data, bool isGrayscale) {
         set->setBrush(barGradient);
         set->setPen(QPen(Qt::black));
     } else {
-        set->setColor(QColor(30, 144, 255));
+        set->setBrush(QBrush(QColor(30, 144, 255)));
+        set->setPen(QPen(QColor(20,100,180)));
     }
     series->append(set);
     auto chart = new QChart();

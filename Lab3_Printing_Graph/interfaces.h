@@ -12,14 +12,12 @@ QT_CHARTS_USE_NAMESPACE
     using DataPoint = QPair<QDateTime, double>;
 using DataSet = QList<DataPoint>;
 
-// интерфейс для чтения данных
 class IDataReader {
 public:
     virtual ~IDataReader() = default;
     virtual DataSet read(const QString& filePath) = 0;
 };
 
-// интерфейс для создания графиков
 class IChart {
 public:
     virtual ~IChart() = default;

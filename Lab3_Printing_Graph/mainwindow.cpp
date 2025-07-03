@@ -52,7 +52,6 @@ void MainWindow::setupUi()
     auto controlPanel = new QHBoxLayout();
     m_chartTypeCombo = new QComboBox(this);
 
-    // Динамически заполняем ComboBox
     m_chartTypeCombo->addItem(IoCContainer::instance().resolve<IChart>("line_chart")->name());
     m_chartTypeCombo->addItem(IoCContainer::instance().resolve<IChart>("bar_chart")->name());
     m_chartTypeCombo->addItem(IoCContainer::instance().resolve<IChart>("pie_chart")->name());
